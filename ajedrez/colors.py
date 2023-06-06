@@ -14,8 +14,10 @@ color = {
   ' ': BLUE,
 }
 inverter = {
-  '_': '=',
-  '=': '_',
-  '.': '@',
-  '@': '.',
+  '_': GRAY,
+  '=': LIGHTGRAY,
+  '.': BLACK,
+  '@': WHITE,
+  ' ': BLUE,
+  '#': DARKGRAY,
 }
