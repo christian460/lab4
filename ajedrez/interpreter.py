@@ -4,7 +4,7 @@ from colors import *
 from chessPictures import *
 
 DIMENCIONES=(640,480)
-
+DISPLAY=pygame.display.set_mode(DIMENCIONES)
 def parseLine(DISPLAY, y, s):
   x = 0
   for c in s:
@@ -16,29 +16,28 @@ def dibujarTab(screen,dimension):
     for j in range(8):
       x, y=i * dimension, j * dimension
       if color%2 == 0:
-        pygame.draw.rect(screen,BLACK,[x,y,dimension,dimension],0)
+        pygame.draw.rect(screen,GRAY,[x,y,dimension,dimension],0)
       else:
-        pygame.draw.rect(screen,WHITE,[x,y,dimension,dimension],0)
+        pygame.draw.rect(screen,LIGHTGRAY,[x,y,dimension,dimension],0)
       color+=1
     color+=1
 
-
-def draw(picture):
-  try:
-    img = picture.img
-  except:
-    img = picture
+def draw():
   pygame.init()
-
-  DISPLAY=pygame.display.set_mode(DIMENCIONES)
-  DISPLAY.fill(BLACK)
-  n = len(img)
-  for i in range(0, n):
-    parseLine(DISPLAY, i, img[i])
-  dibujarTab(DISPLAY,50)
+  
+  dibujarTab(DISPLAY,60)
+  pieza()
   while True:
     for event in pygame.event.get():
       if event.type==pygame.QUIT:
         pygame.quit()
         sys.exit()
     pygame.display.update()
+
+def pieza():
+  imagen=pygame.image.load('imagenes/rock.png')
+  DISPLAY.blit(imagen,(0,0))
+
+
+
+
