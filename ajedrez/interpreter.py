@@ -26,7 +26,7 @@ def draw():
   pygame.init()
   
   dibujarTab(DISPLAY,60)
-  pieza()
+  piezas()
   while True:
     for event in pygame.event.get():
       if event.type==pygame.QUIT:
@@ -34,9 +34,13 @@ def draw():
         sys.exit()
     pygame.display.update()
 
-def pieza():
+def piezas():
   imagen=pygame.image.load('imagenes/rock.png')
+  imagen=pygame.transform.scale(imagen,(60,60))
   DISPLAY.blit(imagen,(0,0))
+  DISPLAY.blit(imagen,(420,0))
+  DISPLAY.blit(imagen,(0,420))
+  DISPLAY.blit(imagen,(420,420))
 
 
 
