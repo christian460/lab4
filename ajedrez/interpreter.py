@@ -66,6 +66,28 @@ def piezas():
   imagen=pygame.transform.scale(imagen,(60,60))
   DISPLAY.blit(imagen,(240,0))
   DISPLAY.blit(imagen,(240,420))
+  #insertar los peones
+  imagen=pygame.image.load('imagenes/peon.png')
+  imagen=pygame.transform.scale(imagen,(60,60))
+  DISPLAY.blit(imagen,(0,60))
+  DISPLAY.blit(imagen,(60,60))
+  DISPLAY.blit(imagen,(120,60))
+  DISPLAY.blit(imagen,(180,60))
+  DISPLAY.blit(imagen,(240,60))
+  DISPLAY.blit(imagen,(300,60))
+  DISPLAY.blit(imagen,(360,60))
+  DISPLAY.blit(imagen,(420,60))
+  DISPLAY.blit(imagen,(0,360))
+  DISPLAY.blit(imagen,(60,360))
+  DISPLAY.blit(imagen,(120,360))
+  DISPLAY.blit(imagen,(180,360))
+  DISPLAY.blit(imagen,(240,360))
+  DISPLAY.blit(imagen,(300,360))
+  DISPLAY.blit(imagen,(360,360))
+  DISPLAY.blit(imagen,(420,360))
+
+
+
 
 
 
