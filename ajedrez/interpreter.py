@@ -35,12 +35,20 @@ def draw():
     pygame.display.update()
 
 def piezas():
+  #Insertar las torres
   imagen=pygame.image.load('imagenes/rock.png')
   imagen=pygame.transform.scale(imagen,(60,60))
   DISPLAY.blit(imagen,(0,0))
   DISPLAY.blit(imagen,(420,0))
   DISPLAY.blit(imagen,(0,420))
   DISPLAY.blit(imagen,(420,420))
+  #Insertar los caballos
+  imagen=pygame.image.load('imagenes/knight.png')
+  imagen=pygame.transform.scale(imagen,(60,60))
+  DISPLAY.blit(imagen,(60,0))
+  DISPLAY.blit(imagen,(360,0))
+  DISPLAY.blit(imagen,(60,420))
+  DISPLAY.blit(imagen,(360,420))
 
 
 
