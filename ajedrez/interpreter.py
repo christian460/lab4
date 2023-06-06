@@ -5,11 +5,11 @@ from chessPictures import *
 
 DIMENCIONES=(640,480)
 DISPLAY=pygame.display.set_mode(DIMENCIONES)
-def parseLine(DISPLAY, y, s):
-  x = 0
+def parseLine(DISPLAY, x, y, s, colores):
   for c in s:
-    pygame.draw.line(DISPLAY, color[c], (x, y), (x, y))
+    pygame.draw.line(DISPLAY, colores[c], (x, y), (x, y))
     x += 1
+
 def dibujarTab(screen,dimension):
   color=0
   for i in range(8):
@@ -24,8 +24,14 @@ def dibujarTab(screen,dimension):
 
 def draw():
   pygame.init()
-  
-  dibujarTab(DISPLAY,60)
+  for i in range(0,7,2):
+    for j in range(8):
+      if(j%2==0):
+        dibujar(square,60*i,j*60,inverter)
+        dibujar(square,60*(i+1),j*60,color)
+      else:
+        dibujar(square,60*i,j*60,color)
+        dibujar(square,60*(i+1),j*60,inverter)
   piezas()
   while True:
     for event in pygame.event.get():
@@ -33,6 +39,15 @@ def draw():
         pygame.quit()
         sys.exit()
     pygame.display.update()
+  
+def dibujar(picture,x,y,color):
+  try:
+    img = picture.img
+  except:
+    img = picture
+  n = len(img)
+  for i in range(0, n):
+    parseLine(DISPLAY,x, i+y, img[i],color)
 
 def piezas():
   #Insertar las torres
@@ -97,7 +112,6 @@ def piezas():
   DISPLAY.blit(imagen,(300,360))
   DISPLAY.blit(imagen,(360,360))
   DISPLAY.blit(imagen,(420,360))
-
 
 
 
