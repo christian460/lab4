@@ -77,6 +77,8 @@ def piezas():
   DISPLAY.blit(imagen,(300,60))
   DISPLAY.blit(imagen,(360,60))
   DISPLAY.blit(imagen,(420,60))
+  imagen=pygame.image.load('imagenes/peon_inv.png')
+  imagen=pygame.transform.scale(imagen,(60,60))
   DISPLAY.blit(imagen,(0,360))
   DISPLAY.blit(imagen,(60,360))
   DISPLAY.blit(imagen,(120,360))
