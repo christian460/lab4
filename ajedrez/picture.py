@@ -1,4 +1,5 @@
 from colors import *
+
 class Picture:
   def __init__(self, img):
     self.img = img;
@@ -7,7 +8,7 @@ class Picture:
     return self.img == other.img
 
   def _invColor(self, color):
-    if color not in inverter:
+    if color != inverter:
       return color
     return inverter[color]
 
@@ -18,9 +19,11 @@ class Picture:
     	vertical.append(value[::-1])
     return vertical
 
-  def horizontalMirror(self):
-    """ Devuelve el espejo horizontal de la imagen """
-    return Picture(None)
+  def horizontalMirror(self, picture):
+    for c in s:
+      img += pygame.draw.line(DISPLAY, colores[c], (x, y), (x, y))
+      x += 1
+    return Picture(img)
 
   def negative(self):
     """ Devuelve un negativo de la imagen """
