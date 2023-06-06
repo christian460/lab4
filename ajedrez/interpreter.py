@@ -56,7 +56,16 @@ def piezas():
   DISPLAY.blit(imagen,(293,0))
   DISPLAY.blit(imagen,(114,420))
   DISPLAY.blit(imagen,(293,420))
-  
+  #nsertar las reinas
+  imagen=pygame.image.load('imagenes/Queen.png')
+  imagen=pygame.transform.scale(imagen,(60,60))
+  DISPLAY.blit(imagen,(180,0))
+  DISPLAY.blit(imagen,(180,420))
+  #nsertar los reyes
+  imagen=pygame.image.load('imagenes/king.png')
+  imagen=pygame.transform.scale(imagen,(60,60))
+  DISPLAY.blit(imagen,(240,0))
+  DISPLAY.blit(imagen,(240,420))
 
 
 
