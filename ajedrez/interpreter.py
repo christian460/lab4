@@ -62,6 +62,8 @@ def piezas():
   imagen=pygame.image.load('imagenes/Queen.png')
   imagen=pygame.transform.scale(imagen,(60,60))
   DISPLAY.blit(imagen,(180,0))
+  imagen=pygame.image.load('imagenes/Queen_inv.png')
+  imagen=pygame.transform.scale(imagen,(60,60))
   DISPLAY.blit(imagen,(180,420))
   #nsertar los reyes
   imagen=pygame.image.load('imagenes/king.png')
