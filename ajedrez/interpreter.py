@@ -49,6 +49,14 @@ def piezas():
   DISPLAY.blit(imagen,(360,0))
   DISPLAY.blit(imagen,(60,420))
   DISPLAY.blit(imagen,(360,420))
+  #Insertar los alfiles
+  imagen=pygame.image.load('imagenes/pawn.png')
+  imagen=pygame.transform.scale(imagen,(70,68))
+  DISPLAY.blit(imagen,(114,0))
+  DISPLAY.blit(imagen,(293,0))
+  DISPLAY.blit(imagen,(114,420))
+  DISPLAY.blit(imagen,(293,420))
+  
 
 
 
