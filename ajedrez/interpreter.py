@@ -67,6 +67,8 @@ def piezas():
   imagen=pygame.image.load('imagenes/king.png')
   imagen=pygame.transform.scale(imagen,(60,60))
   DISPLAY.blit(imagen,(240,0))
+  imagen=pygame.image.load('imagenes/king_inv.png')
+  imagen=pygame.transform.scale(imagen,(60,60))
   DISPLAY.blit(imagen,(240,420))
   #insertar los peones
   imagen=pygame.image.load('imagenes/peon.png')
