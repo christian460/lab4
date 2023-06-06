@@ -40,6 +40,8 @@ def piezas():
   imagen=pygame.transform.scale(imagen,(60,60))
   DISPLAY.blit(imagen,(0,0))
   DISPLAY.blit(imagen,(420,0))
+  imagen=pygame.image.load('imagenes/rock_inv.png')
+  imagen=pygame.transform.scale(imagen,(60,60))
   DISPLAY.blit(imagen,(0,420))
   DISPLAY.blit(imagen,(420,420))
   #Insertar los caballos
