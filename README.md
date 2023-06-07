@@ -168,12 +168,14 @@ comandos siguientes:
     helloworld.py
 
           print("Hello World!")
+          
 - Para ejecutar su script helloworld.py ejecute el siguiente comando:
 
     Ejecutando el script helloworld.py
 
           $ python3 helloworld.py
           
+    ![helloworld](helloworld.jpg)
 ### Comentarios en Python
 - Los comentarios en Python sólo se aplican por cada línea.
 - Pero usted puede utilizar várias técnicas para comentar en el editor Vim.
@@ -185,7 +187,8 @@ comandos siguientes:
     Comentar todas las l ́ıneas que tengan la palabra print
 
           :g/print/s/^/#
-          
+    
+    ![comentario](comentario.jpg)
 ### Virtual Environment
 - La reutilización de código fuente (paquetes, librerias, plugins, etc.) de terceros nos permite construir software más complejo, sobre todo con menos tiempo.
 - En NodeJS se usaban paquetes instalados en el directorio de trabajo y no de manera global, registrando estos paquetes en sus versiones en el archivo package.json.
@@ -240,6 +243,7 @@ comandos siguientes:
 ### Estructura de un entorno virtual
 - Estudie la estructura del entorno virtual.
 - Dentro del directorio para el entorno virtual se debió crear un subdirectorio src/ con el siguiente contenido:
+    ![estructura](estructura.jpg)
 ## Activando entorno virtual
 - En el directorio de trabajo active el entorno virtual ejecutando el script activate:
 
@@ -259,20 +263,76 @@ comandos siguientes:
           (my_env) user@localhost:$ python3 hello.py
           (my_env) user@localhost:$ deactivate
           user@localhost:$
+          
+    ![virtualenv](virtualenv.jpg)
 ## Ejercicios
 - Ejercicios sobre matrices de tamaño NxN.
 ### Matriz escalar
 - Determine si una matriz es escalar.
 - Pruebe el método esEscalar().
+- Ejecucion 
+
+    ![escalar](escalar.jpg)
 ### Matriz unitaria
 - Determine si una matriz es unitaria:
 - Pruebe el método esUnitaria()
-     
+- Ejecucion
+
+    ![unitaria](unitaria.jpg)
+    
+### Enviar avances a repositorio GitHub
+- Se recomienda que se hagan commits en cada avance sustancial, preprogramado por usted mismo, sin embargo, siempre haga commits para guardar sus avances.
+– Cuando este trabajando en los laboratorios de la escuela y haya terminado de enviar sus avances, debe eliminar el directorio de trabajo.
+– Finalmente, siempre apague la computadora y deje todo en orden, como le gustaría haber encontrado el laboratorio. Ponga el ejemplo.
+    
+   ![commit](commit4.jpg)
+   ![commit](commit3.jpg)
+   ![commit](commit2.jpg)
+   ![commit](commit1.jpg)
+
+## TAREA
+- URL GitHub de Tarea del Ajedrez https://github.com/rescobedoq/pw2/tree/main/labs/lab04/Tarea-del-Ajedrezhttps://www.overleaf.com/project/647e1231685f7e122fcc4dcf
+- En esta tarea usted pondrá en práctica sus conocimientos de programación en Python para dibujar un tablero de Ajedrez.
+- La parte gráfica ya está programada, usted sólo tendrá que concentrarse en las estructuras de datos subyacentes.
+- Con el código proporcionado usted dispondrá de varios objetos de tipo Picture para poder realizar su tarea.
+- Estos objetos estarán disponibles importando la biblioteca: chessPictures y estarán internamente representados con arreglos de strings que podrá revisar en el archivo pieces.py
+- La clase Picture tiene un sólo atributo: el arreglo de strings img, el cual contendrá la representación en caracteres de la figura que se desea dibujar.
+- La clase Picture ya cuenta con una función implementada, no debe modificarla, pero si puede usarla para implementar sus otras funciones:
+- invColor: recibe un color como un caracter de texto y devuelve su color negativo, también como texto, deberá revisar el archivo colors.py para conocer los valores negativos de cada caracter.
+- La clase Picture contará además con varios métodos que usted deberá implementar.
+    - verticalMirror: Devuelve el espejo vertical de la imagen
+    - horizontalMirror: Devuelve el espejo horizontal de la imagen
+    - negative: Devuelve un negativo de la imagen
+    - join: Devuelve una nueva figura poniendo la figura del argumento al lado derecho de la figura actual
+    - up: Devuelve una nueva figura poniendo la figura recibida como argumento, encima de la figura actual
+    - under: Devuelve una nueva figura poniendo la figura recibida como argumento, sobre la figura actual
+    - horizontalRepeat: Devuelve una nueva figura repitiendo la figura actual al costado la cantidad de veces que indique el valor de n
+    - verticalRepeat: Devuelve una nueva figura repitiendo la figura actual debajo, la cantidad de veces que indique el valor de n
+- Tenga en cuenta que para implementar todos estos métodos, sólo deberá trabajar sobre la representaci ón interna de un Picture, es decir su atributo img.
+- Para dibujar una objeto Picture bastará importar el método draw de la biblioteca interpreter y usarlo.
+- Ejercicios:
+    - Para resolver los siguientes ejercicios sólo está permitido usar ciclos, condicionales,definición de listas por comprensión, sublistas, map, join, (+), lambda, zip, append, pop, range.
+    - Implemente los métodos de la clase Picture. Se recomienda que implemente la clase picture por etapas, probando realizar los dibujos que se muestran en la siguiente preguntas.
+    - Usando únicamente los métodos de los objetos de la clase Picture dibuje las siguientes figuras (invoque a draw).
+    
+    - Ejercicio A: Se utiliza la funcion dibujar() que recibe los parametros picture que es la figura a dibujar, x que representa la posicion q tomara en el eje x, y que representa la posicion q tomara en el eje y, por ultimo color que puede ser claro o el inverso. Por medio del metodo parseLine(), que utiliza una estructura for en el metodo drawn.line() con los colores que corresponda segun el parametro registrado.
+    
+    ![ejercicio](ejercicioa.jpg)
+    - Ejercicio C: Se utilizo la estructura for para con este bucle dibujar la figura en las 4 veces que nos pide, por medio del metodo dibujar() teniendo en cuenta que el for de este metodo ayuda a poder ubicar correctamente las figuras ya que al metodo parseLine() moviendo la posicion de la magen a dibujar al sumar el iterador con la coordenada y. 
+    
+    ![ejercicio](ejercicioc.jpg)
+    - Ejercicio D: Se utiliza el metodo dibujar() en una estructura for para poder dibujar un cuadrado de cada color en cada iteracion ubicandolos en las posiciones indicadas de la ventana teniendo en cuenta que al ser cuadrados de 60 de alto y ancho las ubicaciones que se obtendran ser multiplos del mismo.
+    ![ejercicio](ejerciciod.jpg)
+    - Ejercicio E: Se utiliza la misma forma del ejercicio d pero cambiando el orden de los cuadrados a crear.
+    ![ejercicio](ejercicioe.jpg)
+    - Ejercicio F: Por medio de dos estructuras for se trabaja con la ventana como si fuera una matriz la varible del primer for es utilizada para en cada iteracion mover los cuadrados en el eje x, para asi crear filas con los cuandrados; la variable del segundo for se encarga de ubicar a los cuadrados en el eje. Ademas de usarse una estructura if que nos dice si la columna es par, en ese caso iniciar la fila con un cuadrado claro en caso contrario sera un cuadrado oscuro hasta rellenar las 4 filas que son requeridas.
+    ![ejercicio](ejerciciof.jpg)
+   - Ejercicio G: Utilizando como base el ejercicio F al aumentar las iteraciones se logra constuir un tablero completo de Ajedrez, luego por medio del metodo piezas() son insertadas todas las piezas importando las imagenes por medio del metodo pygame.image.load() para luego transformar sus dimensiones para poder tener el tamaño adecuado para su casilla para finalmente agreagrarla al tablero mediante el metodo DISPLAY.blint() que toma la imagen y la inserta en las coordenadas que sean enviadas.  
+    ![ejercicio](ejerciciog.jpg)
 
 
-
-### CUESTIONARIO
-## ¿Para qué sirve el directorio pycache?
+## CUESTIONARIO
+### ¿Para qué sirve el directorio pycache?
 - En el drectorio pycache son guardadas versiones compiladas de los modulos con los que se esta trabajando para asi poder acelerar la carga de cada modulo.
 
 #
